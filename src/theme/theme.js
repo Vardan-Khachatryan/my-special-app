@@ -1,16 +1,27 @@
 import { createTheme } from "@mui/material";
 
-export const MuiTheme = createTheme({
+export const lightTheme = createTheme({
   palette: {
     primary: {
-      main: "#1792dc",
-      light: "#56ccff",
-      dark: "#1581c8",
+      main: "#0074a6",
+      light: "#32585d",
+      dark: "#091f22",
     },
-    secondary: {
-      main: "#0aeca3",
-      light: "#80f1bf",
-      dark: "#00dc79",
+  },
+  typography: {
+    fontFamily: "'Roboto', sans-serif",
+    fontSize: 14,
+    htmlFontSize: 16,
+  },
+  spacing: 4,
+});
+
+export const darkTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#091f22",
+      light: "#32585d",
+      dark: "#091f22",
     },
   },
   typography: {

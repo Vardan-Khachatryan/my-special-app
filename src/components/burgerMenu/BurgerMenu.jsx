@@ -1,20 +1,14 @@
-import {
-  AppBar,
-  IconButton,
-  Toolbar,
-  Button,
-  Box,
-  Typography,
-  useTheme,
-} from "@mui/material";
-import favicon from "../../images/android-chrome-64x64.png";
+import React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { AM } from "country-flag-icons/react/3x2";
 import { GB } from "country-flag-icons/react/3x2";
-import { BurgerMenu } from "../../components/burgerMenu/BurgerMenu";
-import useMediaQuery from "@mui/material/useMediaQuery";
-
+import { BurgerList } from "../burgerList/BurgerList";
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -62,57 +56,29 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export const Header = () => {
-  const isMobile = useMediaQuery("(max-width: 820px)");
-  const theme = useTheme();
+export const BurgerMenu = () => {
   return (
-    <>
-      {isMobile ? (
-        <BurgerMenu />
-      ) : (
-        <AppBar position="fixed">
-          <Toolbar>
-            <Box sx={{ flexGrow: 1 }}>
-              <IconButton href="/">
-                <img src={favicon} alt="favicon" />
-              </IconButton>
-            </Box>
+    <AppBar position="fixed">
+      <Toolbar variant="dense">
+        <BurgerList />
+        <Box display="flex" flexDirection="row" alignItems="center">
+          <MaterialUISwitch />
 
-            <Button
-              variant="text"
-              href="/projects"
-              sx={{ color: theme.palette.primary.main }}
-            >
-              <Typography color="white">PROJECTS </Typography>
-            </Button>
-
-            <Button
-              variant="text"
-              href="/contact"
-              sx={{ color: theme.palette.primary.main }}
-            >
-              <Typography color="white"> CONTACT </Typography>
-            </Button>
-            <Box display="flex" flexDirection="row" alignItems="center">
-              <MaterialUISwitch />
-
-              {true ? (
-                <AM
-                  style={{ height: "30px", width: "30px" }}
-                  title="Republic of Armenia"
-                  className="AM"
-                />
-              ) : (
-                <GB
-                  style={{ height: "30px", width: "30px" }}
-                  title="The United Kingdom of Great Britain"
-                  className="GB"
-                />
-              )}
-            </Box>
-          </Toolbar>
-        </AppBar>
-      )}
-    </>
+          {true ? (
+            <AM
+              style={{ height: "30px", width: "30px" }}
+              title="Republic of Armenia"
+              className="AM"
+            />
+          ) : (
+            <GB
+              style={{ height: "30px", width: "30px" }}
+              title="The United Kingdom of Great Britain"
+              className="GB"
+            />
+          )}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
