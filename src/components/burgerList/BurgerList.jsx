@@ -18,17 +18,18 @@ export const BurgerList = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <Button
+        <IconButton
+          edge="start"
+          aria-label="menu"
+          sx={{ mr: 2 }}
           id="basic-button"
           aria-controls={open ? "basic-menu" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
         >
-          <IconButton edge="start" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-        </Button>
+          <MenuIcon sx={{ color: theme.palette.text.forHeaderandFooter }} />
+        </IconButton>
       </Box>
       <Menu
         id="basic-menu"
@@ -45,7 +46,9 @@ export const BurgerList = () => {
             href="/projects"
             sx={{ color: theme.palette.primary.main }}
           >
-            <Typography color="black">PROJECTS </Typography>
+            <Typography color={theme.palette.text.primary}>
+              PROJECTS{" "}
+            </Typography>
           </Button>
         </MenuItem>
 
@@ -55,7 +58,10 @@ export const BurgerList = () => {
             href="/contact"
             sx={{ color: theme.palette.primary.main }}
           >
-            <Typography color="black"> CONTACT </Typography>
+            <Typography color={theme.palette.text.primary}>
+              {" "}
+              CONTACT{" "}
+            </Typography>
           </Button>
         </MenuItem>
       </Menu>

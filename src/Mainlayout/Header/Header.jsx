@@ -1,3 +1,5 @@
+import React, { useContext } from "react";
+import { SwitchContext } from "../../App";
 import {
   AppBar,
   IconButton,
@@ -64,13 +66,18 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 export const Header = () => {
   const isMobile = useMediaQuery("(max-width: 820px)");
+  const switchCheked = useContext(SwitchContext);
   const theme = useTheme();
+
   return (
     <>
       {isMobile ? (
         <BurgerMenu />
       ) : (
-        <AppBar position="fixed">
+        <AppBar
+          position="fixed"
+          sx={{ backgroundColor: theme.palette.primary.dark }}
+        >
           <Toolbar>
             <Box sx={{ flexGrow: 1 }}>
               <IconButton href="/">
@@ -83,7 +90,9 @@ export const Header = () => {
               href="/projects"
               sx={{ color: theme.palette.primary.main }}
             >
-              <Typography color="white">PROJECTS </Typography>
+              <Typography color={theme.palette.text.forHeaderandFooter}>
+                PROJECTS
+              </Typography>
             </Button>
 
             <Button
@@ -91,10 +100,15 @@ export const Header = () => {
               href="/contact"
               sx={{ color: theme.palette.primary.main }}
             >
-              <Typography color="white"> CONTACT </Typography>
+              <Typography color={theme.palette.text.forHeaderandFooter}>
+                CONTACT
+              </Typography>
             </Button>
             <Box display="flex" flexDirection="row" alignItems="center">
-              <MaterialUISwitch />
+              <MaterialUISwitch
+                checked={switchCheked.switchState}
+                onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
+              />
 
               {true ? (
                 <AM

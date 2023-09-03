@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SwitchContext } from "../../App";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { AM } from "country-flag-icons/react/3x2";
 import { GB } from "country-flag-icons/react/3x2";
 import { BurgerList } from "../burgerList/BurgerList";
+import { useTheme } from "@mui/material";
+
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
@@ -57,12 +58,21 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export const BurgerMenu = () => {
+  const switchCheked = useContext(SwitchContext);
+  const theme = useTheme();
+
   return (
-    <AppBar position="fixed">
+    <AppBar
+      position="fixed"
+      sx={{ backgroundColor: theme.palette.primary.dark }}
+    >
       <Toolbar variant="dense">
         <BurgerList />
         <Box display="flex" flexDirection="row" alignItems="center">
-          <MaterialUISwitch />
+          <MaterialUISwitch
+            checked={switchCheked.switchState}
+            onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
+          />
 
           {true ? (
             <AM
