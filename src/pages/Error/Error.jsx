@@ -1,7 +1,9 @@
 import React from "react";
 import { Grid, Typography, Button } from "@mui/material";
 import { Layout } from "../../Mainlayout/Layout";
+import { useTheme } from "@mui/material";
 export const Error = () => {
+  const theme = useTheme();
   return (
     <Layout>
       <Grid
@@ -10,7 +12,7 @@ export const Error = () => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        style={{ minHeight: "100vh" }}
+        sx={{ minHeight: "100vh", backgroundColor: theme.palette.primary.main }}
       >
         <Grid item>
           <Typography variant="h1" color="error">

@@ -8,7 +8,9 @@ export const Footer = () => {
   return (
     <Box
       component="footer"
-      sx={{ backgroundColor: theme.palette.primary.dark, minHeight: "15vh" }}
+      sx={{
+        backgroundColor: theme.palette.primary.dark,
+      }}
     >
       <Stack
         display="flex"

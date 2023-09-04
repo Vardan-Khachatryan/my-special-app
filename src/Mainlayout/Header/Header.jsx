@@ -12,9 +12,8 @@ import {
 import favicon from "../../images/android-chrome-64x64.png";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
-import { AM } from "country-flag-icons/react/3x2";
-import { GB } from "country-flag-icons/react/3x2";
 import { BurgerMenu } from "../../components/burgerMenu/BurgerMenu";
+import { Flag } from "../../components/flag/Flag";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -109,20 +108,7 @@ export const Header = () => {
                 checked={switchCheked.switchState}
                 onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
               />
-
-              {true ? (
-                <AM
-                  style={{ height: "30px", width: "30px" }}
-                  title="Republic of Armenia"
-                  className="AM"
-                />
-              ) : (
-                <GB
-                  style={{ height: "30px", width: "30px" }}
-                  title="The United Kingdom of Great Britain"
-                  className="GB"
-                />
-              )}
+              <Flag />
             </Box>
           </Toolbar>
         </AppBar>

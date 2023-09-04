@@ -10,14 +10,13 @@ export const PhotoLogo = () => {
   return (
     <Stack
       display="flex"
-      flexDirection={{ xs: "column", md: "row" }}
+      flexDirection="row"
       flexWrap="wrap"
       divider={<Divider orientation="vertical" flexItem />}
       justifyContent="space-around"
       alignItems="center"
-      alignContent="space-around"
       spacing={2}
-      sx={{ backgroundColor: theme.palette.primary.main, marginTop: "20vh" }}
+      sx={{ backgroundColor: theme.palette.primary.main }}
     >
       <Paper
         elevation={5}

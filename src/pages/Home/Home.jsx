@@ -3,61 +3,45 @@ import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { ScrollTop } from "../../components/scrollTop/ScrollTop";
 import { Layout } from "../../Mainlayout/Layout";
-import { useTheme, Box } from "@mui/material";
+import { useTheme, Grid, Typography } from "@mui/material";
 import { PhotoLogo } from "../../components/photoLogo/PhotoLogo";
+import { AboutMe } from "../../components/aboutMe/AboutMe";
 
 export const Home = () => {
   const theme = useTheme();
   return (
-    <Box sx={{ backgroundColor: theme.palette.primary.main }}>
-      <Layout>
-        <div id="back-to-top-anchor" />
-        <PhotoLogo />
+    <Layout>
+      <div id="back-to-top-anchor" />
+      <Grid
+        container
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-between"
+        sx={{ backgroundColor: theme.palette.primary.main }}
+      >
+        <Grid
+          item
+          sx={{ mt: "80px" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography
+            variant="h2"
+            sx={{ textAlign: "center", color: theme.palette.text.primary }}
+          >
+            Frontend Developer
+          </Typography>
+        </Grid>
 
-        <h2>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
-          scelerisque nisl consectetur et. Cras mattis consectetur purus sit
-          amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-          quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        </h2>
+        <Grid item>
+          <PhotoLogo />
+        </Grid>
+
+        <Grid item>
+          <AboutMe />
+        </Grid>
 
         <ScrollTop>
           <Fab
@@ -70,7 +54,7 @@ export const Home = () => {
             />
           </Fab>
         </ScrollTop>
-      </Layout>
-    </Box>
+      </Grid>
+    </Layout>
   );
 };

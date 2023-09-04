@@ -5,10 +5,9 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
-import { AM } from "country-flag-icons/react/3x2";
-import { GB } from "country-flag-icons/react/3x2";
 import { BurgerList } from "../burgerList/BurgerList";
 import { useTheme } from "@mui/material";
+import { Flag } from "../flag/Flag";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -73,20 +72,7 @@ export const BurgerMenu = () => {
             checked={switchCheked.switchState}
             onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
           />
-
-          {true ? (
-            <AM
-              style={{ height: "30px", width: "30px" }}
-              title="Republic of Armenia"
-              className="AM"
-            />
-          ) : (
-            <GB
-              style={{ height: "30px", width: "30px" }}
-              title="The United Kingdom of Great Britain"
-              className="GB"
-            />
-          )}
+          <Flag />
         </Box>
       </Toolbar>
     </AppBar>

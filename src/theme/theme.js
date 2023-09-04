@@ -9,7 +9,7 @@ export const lightTheme = createTheme({
       dark: "#091f22",
     },
     text: {
-      primary: "#090a0a",
+      primary: "#0f1010",
       forHeaderandFooter: "#dedede",
     },
   },
@@ -18,7 +18,6 @@ export const lightTheme = createTheme({
     fontSize: 14,
     htmlFontSize: 16,
   },
-  spacing: 4,
 });
 
 export const darkTheme = createTheme({
@@ -40,5 +39,4 @@ export const darkTheme = createTheme({
     fontSize: 14,
     htmlFontSize: 16,
   },
-  spacing: 4,
 });
