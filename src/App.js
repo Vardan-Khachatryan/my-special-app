@@ -15,25 +15,13 @@ const App = () => {
     const savedState = localStorage.getItem("switchState");
     return savedState ? JSON.parse(savedState) : false;
   });
-  const [flagState, setFlagState] = useState(() => {
-    const savedFlagState = localStorage.getItem("flagState");
-    return savedFlagState ? JSON.parse(savedFlagState) : false;
-  });
-
-  useEffect(() => {
-    localStorage.setItem("flagState", JSON.stringify(flagState));
-  }, [flagState]);
 
   useEffect(() => {
     localStorage.setItem("switchState", JSON.stringify(switchState));
   }, [switchState]);
 
-  const handleFlagClick = () => setFlagState(!flagState);
-
   return (
-    <SwitchContext.Provider
-      value={{ switchState, setSwitchState, handleFlagClick, flagState }}
-    >
+    <SwitchContext.Provider value={{ switchState, setSwitchState }}>
       <ThemeProvider theme={switchState ? darkTheme : lightTheme}>
         <BrowserRouter>
           <Routes>

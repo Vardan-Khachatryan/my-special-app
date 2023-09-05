@@ -15,7 +15,7 @@ export const PhotoLogo = () => {
       divider={<Divider orientation="vertical" flexItem />}
       justifyContent="space-around"
       alignItems="center"
-      spacing={2}
+      spacing={1}
       sx={{ backgroundColor: theme.palette.primary.main }}
     >
       <Paper

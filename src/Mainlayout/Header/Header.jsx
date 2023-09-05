@@ -13,7 +13,7 @@ import favicon from "../../images/android-chrome-64x64.png";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { BurgerMenu } from "../../components/burgerMenu/BurgerMenu";
-import { Flag } from "../../components/flag/Flag";
+
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -108,7 +108,6 @@ export const Header = () => {
                 checked={switchCheked.switchState}
                 onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
               />
-              <Flag />
             </Box>
           </Toolbar>
         </AppBar>

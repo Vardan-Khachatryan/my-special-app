@@ -7,7 +7,6 @@ import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import { BurgerList } from "../burgerList/BurgerList";
 import { useTheme } from "@mui/material";
-import { Flag } from "../flag/Flag";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -72,7 +71,6 @@ export const BurgerMenu = () => {
             checked={switchCheked.switchState}
             onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
           />
-          <Flag />
         </Box>
       </Toolbar>
     </AppBar>

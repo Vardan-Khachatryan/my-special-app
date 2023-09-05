@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme, Box, Typography } from "@mui/material";
+import Link from "@mui/material/Link";
 
 export const AboutMe = () => {
   const theme = useTheme();
@@ -28,7 +29,7 @@ export const AboutMe = () => {
         variant="h3"
         sx={{ textAlign: "center", color: theme.palette.text.primary }}
       >
-        About Me
+        ABOUT ME
       </Typography>
       <Typography
         variant="body1"
@@ -49,13 +50,26 @@ export const AboutMe = () => {
         overcrowded, juniors are not needed. But I did not give up, because it
         was a challenge for me and I decided not to give up, because whoever is
         looking for a job will find one. So I signed up for a course on
-        JavaScript in the company Business Development Group and realized that I
-        like it, after this course I took a course on React in the same company,
-        but it was not limited to that, I started to search the Internet for
-        answers to questions and realized that in programming one of the main
-        advantages is that you can solve the same problem in many ways and it
-        gives a sense of freedom. Now I plan to find a frontend developer
-        position and join the game.
+        JavaScript in the company
+        <Link
+          href="https://bdg.am/en/"
+          target="_blank"
+          sx={{
+            color: theme.palette.text.primary,
+            marginRight: "1%",
+            marginLeft: "1%",
+            fontWeight: "bold",
+          }}
+          rel="noopener"
+        >
+          Business Development Group
+        </Link>
+        and realized that I like it, after this course I took a course on React
+        in the same company, but it was not limited to that, I started to search
+        the Internet for answers to questions and realized that in programming
+        one of the main advantages is that you can solve the same problem in
+        many ways and it gives a sense of freedom. Now I plan to find a frontend
+        developer position and join the game.
       </Typography>
     </Box>
   );
