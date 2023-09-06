@@ -10,13 +10,12 @@ export const PhotoLogo = () => {
   return (
     <Stack
       display="flex"
-      flexDirection="row"
-      flexWrap="wrap"
+      flexDirection={{ xs: "column", lg: "row" }}
       divider={<Divider orientation="vertical" flexItem />}
       justifyContent="space-around"
       alignItems="center"
-      spacing={1}
-      sx={{ backgroundColor: theme.palette.primary.main }}
+      spacing={2}
+      sx={{ backgroundColor: theme.palette.primary.main, marginTop: "10%" }}
     >
       <Paper
         elevation={5}
@@ -28,9 +27,15 @@ export const PhotoLogo = () => {
             boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
             transform: "translateY(-5px)",
           },
+          width: "40%",
+          height: "auto",
         }}
       >
-        <img style={{ width: "30vw" }} src={Myphoto} alt="Myphoto" />
+        <img
+          style={{ width: "100%", maxWidth: "100%", height: "auto" }}
+          src={Myphoto}
+          alt="Myphoto"
+        />
       </Paper>
 
       <Paper
@@ -43,9 +48,15 @@ export const PhotoLogo = () => {
             boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
             transform: "translateY(-5px)",
           },
+          width: "40%",
+          height: "auto",
         }}
       >
-        <img style={{ width: "30vw" }} src={VK} alt="Logo" />
+        <img
+          style={{ width: "100%", maxWidth: "100%", height: "auto" }}
+          src={VK}
+          alt="Logo"
+        />
       </Paper>
     </Stack>
   );

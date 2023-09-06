@@ -39,6 +39,10 @@ export const BurgerList = () => {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
+        sx={{
+          height: "auto",
+          width: "50%",
+        }}
       >
         <MenuItem>
           <Button

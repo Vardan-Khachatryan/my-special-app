@@ -3,11 +3,12 @@ import { Home } from "./pages/Home/Home";
 import { Contact } from "./pages/Contact/Contact";
 import { Projects } from "./pages/Projects/Projects";
 import { Error } from "./pages/Error/Error";
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 import { lightTheme } from "./theme/theme";
 import { darkTheme } from "./theme/theme";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
+
 import "./App.css";
 export const SwitchContext = createContext();
 const App = () => {

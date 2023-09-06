@@ -33,7 +33,7 @@ export const SoftSkills = () => {
 
       <List
         sx={{
-          fontSize: "2.4rem",
+          fontSize: "2rem",
           color: theme.palette.text.primary,
         }}
       >
@@ -43,7 +43,7 @@ export const SoftSkills = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
@@ -55,7 +55,7 @@ export const SoftSkills = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
@@ -67,7 +67,7 @@ export const SoftSkills = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
@@ -79,7 +79,7 @@ export const SoftSkills = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >

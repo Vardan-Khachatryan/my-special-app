@@ -65,13 +65,15 @@ export const BurgerMenu = () => {
       sx={{ backgroundColor: theme.palette.primary.dark }}
     >
       <Toolbar variant="dense">
-        <BurgerList />
-        <Box display="flex" flexDirection="row" alignItems="center">
-          <MaterialUISwitch
-            checked={switchCheked.switchState}
-            onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
-          />
+        <Box sx={{ flexGrow: 1 }}>
+          <BurgerList />
         </Box>
+
+        <MaterialUISwitch
+          checked={switchCheked.switchState}
+          onChange={(e) => switchCheked.setSwitchState(e.target.checked)}
+          sx={{ alignItems: "center" }}
+        />
       </Toolbar>
     </AppBar>
   );

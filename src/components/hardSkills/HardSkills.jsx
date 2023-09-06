@@ -31,9 +31,8 @@ export const HardSkills = () => {
       gap={5}
     >
       <Typography
-        variant="h2"
+        variant="h3"
         sx={{ textAlign: "center", color: theme.palette.text.primary }}
-        display="flex"
         justifyContent="center"
       >
         HARD SKILLS
@@ -41,7 +40,7 @@ export const HardSkills = () => {
 
       <Box
         display="flex"
-        flexDirection="row"
+        flexDirection={{ xs: "column", lg: "row" }}
         flexWrap="wrap"
         justifyContent="space-between"
         alignItems="center"

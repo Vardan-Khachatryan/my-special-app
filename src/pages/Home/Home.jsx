@@ -9,8 +9,10 @@ import { AboutMe } from "../../components/aboutMe/AboutMe";
 import { HardSkills } from "../../components/hardSkills/HardSkills";
 import { SoftSkills } from "../../components/softskills/SoftSkills";
 import { Languages } from "../../components/languages/Languages";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const Home = () => {
+  const isMobile = useMediaQuery("(max-width: 800px)");
   const theme = useTheme();
   return (
     <Layout>
@@ -19,13 +21,17 @@ export const Home = () => {
         container
         display="flex"
         flexDirection="column"
-        justifyContent="space-around"
+        justifyContent="flex-start"
         sx={{ backgroundColor: theme.palette.primary.main }}
+        spacing={10}
       >
-        <Grid item sx={{ mt: "100px" }} display="flex" justifyContent="center">
+        <Grid item sx={{ marginTop: "15%" }}>
           <Typography
-            variant="h2"
-            sx={{ textAlign: "center", color: theme.palette.text.primary }}
+            variant={isMobile ? "h4" : "h1"}
+            sx={{
+              textAlign: "center",
+              color: theme.palette.text.primary,
+            }}
           >
             FRONTEND DEVELOPER
           </Typography>
@@ -47,22 +53,21 @@ export const Home = () => {
           <SoftSkills />
         </Grid>
 
-        <Grid item mb={3}>
+        <Grid item>
           <Languages />
         </Grid>
-
-        <ScrollTop>
-          <Fab
-            size="small"
-            aria-label="scroll back to top"
-            sx={{ backgroundColor: theme.palette.primary.dark }}
-          >
-            <KeyboardArrowUpIcon
-              sx={{ color: theme.palette.text.forHeaderandFooter }}
-            />
-          </Fab>
-        </ScrollTop>
       </Grid>
+      <ScrollTop>
+        <Fab
+          size="small"
+          aria-label="scroll back to top"
+          sx={{ backgroundColor: theme.palette.primary.dark }}
+        >
+          <KeyboardArrowUpIcon
+            sx={{ color: theme.palette.text.forHeaderandFooter }}
+          />
+        </Fab>
+      </ScrollTop>
     </Layout>
   );
 };

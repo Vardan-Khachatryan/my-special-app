@@ -10,9 +10,9 @@ export const Languages = () => {
       flexDirection="column"
       justifyContent="space-around"
       alignItems="center"
-      gap={3}
+      gap={2}
       sx={{
-        margin: "10%",
+        margin: "5%",
         border: `4px solid ${theme.palette.text.primary}`,
         padding: "3%",
         borderRadius: "40px",
@@ -22,19 +22,24 @@ export const Languages = () => {
           boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
           transform: "translateY(-5px)",
         },
+        marginBottom: "20%",
       }}
     >
       <Typography
         variant="h3"
         sx={{ textAlign: "center", color: theme.palette.text.primary }}
+        justifyContent="center"
       >
         LANGUAGES
       </Typography>
 
       <List
         sx={{
-          fontSize: "2.4rem",
+          fontSize: "2rem",
           color: theme.palette.text.primary,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-around",
         }}
       >
         <ListItem
@@ -43,7 +48,7 @@ export const Languages = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
@@ -55,7 +60,7 @@ export const Languages = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
@@ -67,7 +72,7 @@ export const Languages = () => {
               content: '"\\2022"',
               color: theme.palette.text.primary,
               marginRight: "5px",
-              fontSize: "4rem",
+              fontSize: "3rem",
             },
           }}
         >
