@@ -22,7 +22,7 @@ export const Languages = () => {
           boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
           transform: "translateY(-5px)",
         },
-        marginBottom: "20%",
+        marginBottom: "25%",
       }}
     >
       <Typography

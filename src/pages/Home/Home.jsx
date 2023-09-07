@@ -25,7 +25,11 @@ export const Home = () => {
         sx={{ backgroundColor: theme.palette.primary.main }}
         spacing={10}
       >
-        <Grid item sx={{ marginTop: "15%" }}>
+        <Grid item sx={{ marginTop: "8%" }}>
+          <PhotoLogo />
+        </Grid>
+
+        <Grid item>
           <Typography
             variant={isMobile ? "h4" : "h1"}
             sx={{
@@ -35,10 +39,6 @@ export const Home = () => {
           >
             FRONTEND DEVELOPER
           </Typography>
-        </Grid>
-
-        <Grid item>
-          <PhotoLogo />
         </Grid>
 
         <Grid item>
