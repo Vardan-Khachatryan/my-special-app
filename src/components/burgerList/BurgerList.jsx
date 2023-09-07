@@ -3,6 +3,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton, Button, Box, Typography, useTheme } from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
 
 export const BurgerList = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -29,6 +30,10 @@ export const BurgerList = () => {
           onClick={handleClick}
         >
           <MenuIcon sx={{ color: theme.palette.text.forHeaderandFooter }} />
+        </IconButton>
+
+        <IconButton edge="start" aria-label="home" href="/">
+          <HomeIcon sx={{ color: theme.palette.text.forHeaderandFooter }} />
         </IconButton>
       </Box>
       <Menu

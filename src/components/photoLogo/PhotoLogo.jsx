@@ -27,7 +27,7 @@ export const PhotoLogo = () => {
             boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
             transform: "translateY(-5px)",
           },
-          width: "40%",
+          width: "45%",
           height: "auto",
         }}
       >
@@ -48,7 +48,7 @@ export const PhotoLogo = () => {
             boxShadow: "0 0 20px rgba(255, 255, 255, 1)",
             transform: "translateY(-5px)",
           },
-          width: "40%",
+          width: "45%",
           height: "auto",
         }}
       >
